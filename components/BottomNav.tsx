@@ -12,6 +12,7 @@ const ONGLETS = [
   { href: '/mes-revenus', icon: 'user', label: 'Profil' }
 ]
 
+
 function Icone({ nom, actif }: { nom: string; actif: boolean }) {
   const couleur = actif ? '#FFFFFF' : '#F4E9DF'
   const opacite = actif ? 1 : 0.55
@@ -49,6 +50,7 @@ function Icone({ nom, actif }: { nom: string; actif: boolean }) {
 
 export default function BottomNav() {
   const pathname = usePathname()
+  if (pathname === '/') return null
 
   return (
     <div
