@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import type { ReactElement } from 'react'
 
 const ONGLETS = [
   { href: '/accueil', icon: 'home', label: 'Accueil' },
@@ -14,7 +15,7 @@ function Icone({ nom, actif }: { nom: string; actif: boolean }) {
   const couleur = actif ? '#FFFFFF' : '#F4E9DF'
   const opacite = actif ? 1 : 0.55
 
-  const icones: Record<string, JSX.Element> = {
+  const icones: Record<string, ReactElement> = {
     home: (
       <path d="M3 12l9-9 9 9M5 10v10a1 1 0 001 1h4v-6h4v6h4a1 1 0 001-1V10" stroke={couleur} strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" />
     ),
